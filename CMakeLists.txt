@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.1)
+
+set (PROJECT_NAME "IPC")
+project(${PROJECT_NAME})
+
+set (PROJECT_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+    set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR})
+endif()
+message(STATUS "CMAKE_INSTALL_PREFIX : ${CMAKE_INSTALL_PREFIX}")
+
+add_subdirectory("./src/pipes")
